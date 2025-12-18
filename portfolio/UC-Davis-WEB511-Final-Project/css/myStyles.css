@@ -1,0 +1,36 @@
+#header {
+    margin-bottom: 50px;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+
+.column {
+    width: 350px;
+    margin: 0 25px;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+#exitDebugMode {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+    margin: 0 auto;
+}
+
+#debugOutput {
+    display: none;
+    text-align: left;
+    width: 800px;
+    margin: 0 auto;
+}

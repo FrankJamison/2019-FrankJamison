@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Frank Jamison | Final Project</title>
+    <script type="text/javascript" src="js/myScript.js" defer></script>
+    <!--<script type="text/javascript" src="js/myScript2.js" defer></script>-->
+    <link rel="stylesheet" type="text/css" href="css/myStyles.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Javascript Stop Watch and Countdown Timer</h1>
+    </div>
+    <div id="container">
+        <hr>
+        <div id="stopWatch" class="column">
+            <h2>Stop Watch</h2>
+            <div id="stopWatchOutput">00:00:00</div>
+            <div id="stopWatchControls">
+                <button id="startStop" onclick="debugButtonClick('startStop'); startWatch();">Start/Stop</button>
+                <button id="watchReset" onclick="debugButtonClick('watchReset');watchReset();">Clear</button>
+            </div>
+        </div>
+        <hr>
+        <div id="countdownTimer" class="column">
+            <h2>Countdown Timer</h2>
+            <p>Please enter the desired time:<br>
+                <input type="text" id="timeEntered"><br>
+                <span id="timeAlert"></span>
+            </p>
+            <p>
+                <button id="startPause" onclick="debugButtonClick('startPause');startTimer();">Start/Pause</button>
+            </p>
+            <div id="countdownTimerOutput">00:00:00</div>
+        </div>
+        <hr>
+    </div>
+
+    <div id="debugOutput" class="hidden">
+        <hr>
+        <h1>Debug Output Data</h1>
+
+        <button id="exitDebugMode" class="button" onclick="debugButtonClick('debugExit'); exitDebugMode(); return false;">Exit Debug Mode</button>
+    </div>
+
+</body>
+
+</html>

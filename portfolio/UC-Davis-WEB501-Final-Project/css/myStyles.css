@@ -1,0 +1,928 @@
+/***************************/
+/* COLOR PALETTE           */
+/***************************/
+/*
+	rgb(  0,  0,  0)
+	rgb( 76, 67, 65)
+	rgb(112, 48, 48)
+	rgb(150,133,143)
+	rgb(213,213,213)
+	rgb(233,150,122)
+	rgb(255,255,255)
+	
+*/
+
+
+
+/***************************/
+/* LIMITED RESET           */
+/***************************/
+html,
+body,
+div,
+section,
+article,
+aside,
+header,
+hgroup,
+footer,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+canvas,
+video,
+th,
+td,
+tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+
+/***************************/
+/* HTML5 DISPLAY RULE      */
+/***************************/
+address,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+
+/***************************/
+/* PAGE ELEMENTS           */
+/***************************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: rgb(213, 213, 213);
+    color: rgb(76, 67, 65);
+    font: 100% Cantarell, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+article {
+    padding: 1em;
+}
+
+footer {
+    background-color: rgb(150, 133, 143);
+    height: 3em;
+    color: rgb(255, 255, 255);
+    padding: .75em;
+    text-align: right;
+    margin-top: 1em;
+}
+
+
+
+/***************************/
+/* GLOBAL STYLES           */
+/***************************/
+a {
+    color: rgb(76, 67, 65);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(233, 150, 122);
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+article h1,
+article h2,
+article h3 {
+    font-family: Cardo, Georgia, Times, serif;
+    font-weight: normal;
+}
+
+img {
+    display: inline-block;
+}
+
+p {
+    margin-bottom: .75em;
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.pageContainer {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+#pageTitle {
+    text-shadow: .10px .10px .2px rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.sectionTitle {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+/***************************/
+/* HEADER TOP              */
+/***************************/
+#headerTop {
+    display: flex;
+    background-color: rgb(150, 133, 143);
+    color: rgb(255, 255, 255);
+    letter-spacing: .1em;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+#headerTop #siteLogo {
+    height: 4em;
+    width: 4em;
+    margin: .5em;
+}
+
+#headerTop #siteTitle {
+    text-transform: uppercase;
+    margin: .75em auto;
+    font-size: 1.75em;
+}
+
+#headerTop #siteSubtitle {
+    display: none;
+}
+
+
+
+/***************************/
+/* PAGE BANNER             */
+/***************************/
+#pageBanner {
+    display: none;
+}
+
+
+
+/***************************/
+/* SITE NAVIGATION         */
+/***************************/
+#siteNav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#siteNav li {
+    flex: 1 50%;
+    text-align: center;
+    padding: .5em;
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+
+#siteNav li:hover {
+    background-color: rgba(150, 133, 143, .1);
+}
+
+#siteNav .navLink {
+    display: flex;
+    font-family: Cantarell;
+}
+
+#siteNav .navLink .linkPhrase {
+    display: none;
+}
+
+#siteNav .navLink .linkName {
+    margin: .25em 30px;
+    font-variant: small-caps;
+    letter-spacing: .1em;
+}
+
+#siteNav .navHome {
+    background: url("../images/homeIcon.png") no-repeat left center;
+}
+
+#siteNav .navHome.current {
+    background: url("../images/homeIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navHome:hover {
+    background: url("../images/homeIconHover.png") no-repeat left center;
+}
+
+#siteNav .navEmployment {
+    background: url("../images/employmentIcon.png") no-repeat left center;
+}
+
+#siteNav .navEmployment.current {
+    background: url("../images/employmentIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navEmployment:hover {
+    background: url("../images/employmentIconHover.png") no-repeat left center;
+}
+
+#siteNav .navEducation {
+    background: url("../images/educationIcon.png") no-repeat left center;
+}
+
+#siteNav .navEducation.current {
+    background: url("../images/educationIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navEducation:hover {
+    background: url("../images/educationIconHover.png") no-repeat left center;
+}
+
+#siteNav .navSkills {
+    background: url("../images/skillsIcon.png") no-repeat left center;
+}
+
+#siteNav .navSkills.current {
+    background: url("../images/skillsIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navSkills:hover {
+    background: url("../images/skillsIconHover.png") no-repeat left center;
+}
+
+#siteNav .navAwards {
+    background: url("../images/awardsIcon.png") no-repeat left center;
+}
+
+#siteNav .navAwards.current {
+    background: url("../images/awardsIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navAwards:hover {
+    background: url("../images/awardsIconHover.png") no-repeat left center;
+}
+
+#siteNav .navOrganizations {
+    background: url("../images/organizationsIcon.png") no-repeat left center;
+}
+
+#siteNav .navOrganizations.current {
+    background: url("../images/organizationsIconCurrent.png") no-repeat left center;
+}
+
+#siteNav .navOrganizations:hover {
+    background: url("../images/organizationsIconHover.png") no-repeat left center;
+}
+
+#siteNav .navLink.current {
+    color: rgb(112, 48, 48);
+}
+
+#siteNav .navLink:hover {
+    color: rgb(233, 150, 122);
+}
+
+#siteNav .navLink,
+#siteNav .navLink.current,
+#siteNav .navLink:hover {
+    background-size: 25px 25px;
+}
+
+
+
+/***************************/
+/* CONTENT CONTAINER       */
+/***************************/
+#contentContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em;
+}
+
+#contentContainer h1 {
+    text-align: center;
+}
+
+
+
+/***************************/
+/* HOME PAGE               */
+/***************************/
+#home img {
+    display: block;
+    margin: 1em auto;
+}
+
+#home figcaption {
+    display: none;
+}
+
+img#portrait {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+/***************************/
+/* EMPLOYMENT PAGE         */
+/***************************/
+#employment {
+    width: 100%;
+}
+
+.jobDetails {
+    padding: 20px 0 10px;
+}
+
+.jobTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.jobCompany,
+.jobLength {
+    font-size: 1.1em;
+}
+
+.jobHighlights ul {
+    list-style: square;
+    margin-left: 18px;
+}
+
+.jobHighlights li {
+    margin: 5px 0;
+}
+
+
+/***************************/
+/* EDUCATION PAGE          */
+/***************************/
+#education {
+    width: 100%;
+}
+
+.degreeDetails,
+.certificationDetails {
+    padding: 20px 0 10px;
+}
+
+.degreeType,
+.certificationTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.degreeSchool,
+.certificationCompany {
+    font-size: 1.1em;
+}
+
+.degreeHighlights ul,
+.certificationCourses ul {
+    list-style: square;
+    margin-left: 18px;
+}
+
+.degreeHighlights li,
+.certificationCourses li {
+    margin: 5px 0;
+}
+
+/***************************/
+/* SKILLS PAGE             */
+/***************************/
+#skills {
+    width: 100%;
+}
+
+.skillDetails {
+    padding: 20px 0 10px;
+}
+
+.skillList {
+    width: 100%;
+}
+
+.skillList>div {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/***************************/
+/* AWARDS PAGE             */
+/***************************/
+#awards {
+    width: 100%;
+}
+
+.awardDetails {
+    padding: 20px 0 10px;
+}
+
+.awardPresenter {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.awardPresenterBranch,
+.awardPresenterLocation {
+    font-size: 1.1em;
+}
+
+.awardsEarned ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.awardsEarned li {
+    margin: 5px 0;
+}
+
+
+
+/***************************/
+/* ORGANIZATIONS PAGE      */
+/***************************/
+#organizations {
+    width: 100%;
+}
+
+.organizationDetails {
+    padding: 20px 0 10px;
+}
+
+.organizationType,
+.organizationName {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.organizationMemberships ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.organizationMemberships li {
+    margin: 5px 0;
+}
+
+
+
+/***************************/
+/* CONTACT INFO            */
+/***************************/
+#contactInfo #contactContainer {
+    background: rgb(237, 228, 214);
+    padding: 20px;
+    border: none;
+    border-radius: 15px 0 15px 0;
+    width: 90%;
+    margin: 1em auto;
+}
+
+#contactInfo li a {
+    border: none;
+    display: block;
+    font-size: 1.2em;
+    line-height: 35px;
+    margin-top: .25em;
+    padding-left: 40px;
+    width: 300px;
+}
+
+#contactInfo .contactHeading {
+    border-bottom: 1px solid rgb(76, 67, 65);
+    font-size: 1.3em;
+    margin: .5em 0 0em;
+    font-weight: normal;
+    text-shadow: .10px .10px .3px rgb(0, 0, 0);
+    letter-spacing: .05em;
+}
+
+#contactInfo .contactTitle {
+    float: none;
+    font-size: 1.75em;
+    font-weight: normal;
+    margin-bottom: 0;
+    text-shadow: .5px .5px .5px rgb(0, 0, 0);
+}
+
+#contactInfo #contactContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactInfo #contactContent address {
+    font-style: normal;
+}
+
+#contactInfo a.facebook {
+    background: url("../images/facebook.png") no-repeat left center;
+}
+
+#contactInfo a.google {
+    background: url("../images/googlePlus.png") no-repeat left center;
+}
+
+#contactInfo a.linked {
+    background: url("../images/linkedIn.png") no-repeat left center;
+}
+
+#contactInfo a.twitter {
+    background: url("../images/twitter.png") no-repeat left center;
+}
+
+
+
+/***************************/
+/* MEDIA QUERIES           */
+/***************************/
+
+@media screen and (min-width: 513px) {
+
+    /***************************/
+    /* HEADER TOP              */
+    /***************************/
+    #headerTop #siteTitle {
+        margin: 0;
+        margin-top: .25em;
+    }
+
+    #headerTop #siteSubtitle {
+        display: inline;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+
+
+    /***************************/
+    /* PAGE BANNER             */
+    /***************************/
+    #pageBanner {
+        display: inline;
+        position: relative;
+    }
+
+    #pageBanner .bannerImage {
+        width: 100%;
+    }
+
+    #pageBanner .title {
+        position: absolute;
+        bottom: 1px;
+        right: 0;
+        color: rgb(255, 255, 255);
+        background-color: rgba(76, 67, 65, .7);
+        margin-bottom: .15em;
+        margin-right: 5px;
+        padding: .2em;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+
+
+    /***************************/
+    /* SITE NAVIGATION         */
+    /***************************/
+    #siteNav ul {
+        margin-top: -.4em;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #siteNav li {
+        flex: 1 50%;
+    }
+
+
+
+    /***************************/
+    /* CONTACT INFO            */
+    /***************************/
+    #contactInfo #contactContent {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    #contactInfo .contact,
+    #contactInfo .socialMedia {
+        width: 44%;
+        margin: 0 3%;
+    }
+
+    /***************************/
+    /* SKILLS PAGE             */
+    /***************************/
+
+    .skillList {
+        overflow: auto;
+    }
+
+    .skillList>div {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    /***************************/
+    /* GLOBAL STYLES           */
+    /***************************/
+    .pageContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+
+    /***************************/
+    /* HEADER TOP              */
+    /***************************/
+    #headerTop {
+        text-shadow: 3px 3px 2px rgb(0, 0, 0);
+    }
+
+    #headerTop #siteLogo {
+        height: 5em;
+        width: 5em;
+    }
+
+    #headerTop #siteTitle {
+        font-size: 2.1875em;
+        letter-spacing: .1em;
+    }
+
+    #headerTop #siteSubtitle {
+        font-size: 1.25em;
+    }
+
+
+
+    /***************************/
+    /* PAGE BANNER             */
+    /***************************/
+    #pageBanner .title {
+        font-size: 1.25em;
+    }
+
+
+
+    /***************************/
+    /* SITE NAVIGATION         */
+    /***************************/
+    #siteNav li {
+        flex: 1 33.33333%;
+    }
+
+    #siteNav .navLink {
+        flex-direction: column;
+    }
+
+    #siteNav .navLink .linkName {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #siteNav .navLink .linkPhrase {
+        display: block;
+        text-transform: lowercase;
+        font-style: italic;
+        font-size: .8em;
+    }
+
+    #siteNav .navLink .linkName,
+    #siteNav .navLink .linkPhrase {
+        align-items: flex-start;
+        margin-right: auto;
+        margin-left: 50px;
+    }
+
+    #siteNav .navLink,
+    #siteNav .navLink.current,
+    #siteNav .navLink:hover {
+        background-size: 38px 38px;
+    }
+
+
+
+    /***************************/
+    /* CONTENT CONTAINER       */
+    /***************************/
+    #contentContainer {
+        flex-direction: row;
+    }
+
+
+
+    /***************************/
+    /* CONTACT INFO            */
+    /***************************/
+    #contactInfo {
+        margin-top: .75em;
+    }
+
+    #contactContainer #contactContent {
+        flex-direction: column;
+    }
+
+    #contactInfo .contact,
+    #contactInfo .socialMedia {
+        width: 94%;
+        margin: 0 3%;
+    }
+
+    #contactInfo li a {
+        width: 256px;
+    }
+
+    #contactContainer article,
+    #contentContainer aside {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+
+    /***************************/
+    /* SKILLS PAGE             */
+    /***************************/
+
+    .skillList>div {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    /***************************/
+    /* GLOBAL STYLES           */
+    /***************************/
+    .pageContainer {
+        width: 85%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+
+
+    /***************************/
+    /* HEADER TOP              */
+    /***************************/
+    #headerTop #siteLogo {
+        height: 6.25em;
+        width: 6.25em;
+    }
+
+    #headerTop #siteTitle {
+        font-size: 2.5em;
+        letter-spacing: .1em;
+    }
+
+    #headerTop #siteSubtitle {
+        font-size: 1.6667em;
+        letter-spacing: .125em;
+    }
+
+
+
+    /***************************/
+    /* SITE NAVIGATION         */
+    /***************************/
+    #siteNav li {
+        border: 1px solid rgb(0, 0, 0);
+        border-left: none;
+        flex: 1 0;
+    }
+
+    #siteNav li:last-child {
+        border-right: none;
+    }
+
+    #siteNav .navLink .linkName {
+        padding-top: 45px;
+        font-size: 1.25em;
+    }
+
+    #siteNav .navLink .linkPhrase {
+        font-size: 1em;
+    }
+
+    #siteNav .navLink .linkName,
+    #siteNav .navLink .linkPhrase {
+        align-items: center;
+        margin: auto;
+    }
+
+    #siteNav .navLink,
+    #siteNav .navLink.current,
+    #siteNav .navLink:hover {
+        background-position: top center;
+    }
+
+
+
+    /***************************/
+    /* CONTENT CONTAINER       */
+    /***************************/
+    #contactInfo li a {
+        width: 300px;
+    }
+
+    #contentContainer h1 {
+        text-align: left;
+    }
+
+
+
+    /***************************/
+    /* HOME PAGE               */
+    /***************************/
+    #home figure {
+        float: left;
+        margin: -1em 1em 0 0;
+    }
+
+    #home figcaption {
+        display: block;
+        margin-top: 0;
+        padding-top: 0;
+        font-size: .8em;
+    }
+
+    #home #pageTitle {
+        margin-bottom: .5em;
+    }
+
+    /***************************/
+    /* SKILLS PAGE             */
+    /***************************/
+
+    .skillList>div {
+        width: 50%;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+    /***************************/
+    /* SKILLS PAGE             */
+    /***************************/
+
+    .skillList>div {
+        width: 33%;
+    }
+}
