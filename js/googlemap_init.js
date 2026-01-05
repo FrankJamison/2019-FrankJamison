@@ -54,10 +54,32 @@
 
     function runInit(mapEl, address) {
         if (!mapEl) return;
-        var map = createMap(mapEl);
+
+        // If the map container is inside a collapsed accordion/section,
+        // Google Maps may render blank. Delay initialization until visible.
+        var w = mapEl.offsetWidth || 0;
+        var h = mapEl.offsetHeight || 0;
+        if (w === 0 || h === 0) {
+            var attempts = Number(mapEl.getAttribute('data-gmap-attempts') || '0');
+            if (attempts < 40) { // ~10s at 250ms
+                mapEl.setAttribute('data-gmap-attempts', String(attempts + 1));
+                setTimeout(function() {
+                    runInit(mapEl, address);
+                }, 250);
+            }
+            return;
+        }
+
+        var map = mapEl.__googleMapInstance || createMap(mapEl);
+        mapEl.__googleMapInstance = map;
         var normalized = normalizeAddress(address) || getDefaultAddressFromPage();
         if (normalized) {
             geocodeAndPlaceMarker(map, normalized);
+        }
+
+        // If it was initialized while transitioning to visible, force a resize.
+        if (google && google.maps && google.maps.event && google.maps.event.trigger) {
+            google.maps.event.trigger(map, 'resize');
         }
     }
 
